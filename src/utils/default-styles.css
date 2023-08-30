@@ -1,0 +1,291 @@
+body{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overscroll-behavior: none;
+}
+html{
+    font-size:calc(.8571428571428571rem + .08928571428571432vw)
+}
+@media screen and (max-width:2560px){
+    html{
+        font-size:calc(.8571428571428572rem + .08928571428571427vw)
+    }
+}
+@media screen and (max-width:1440px){
+    html{
+        font-size:calc(.8438475546305931rem + .10405827263267431vw)
+    }
+}
+@media screen and (max-width:479px){
+    html{
+        font-size:calc(.8123692468619247rem + .20920502092050208vw)
+    }
+}
+
+.page-wrapper {
+    overflow: clip
+}
+
+[tabindex]:focus-visible,
+input[type=file]:focus-visible {
+    outline:.125rem solid #4d65ff;
+    outline-offset:.125rem
+}
+.w-richtext > :not(div):first-child, 
+.w-richtext > div:first-child > :first-child {
+    margin-top:0!important
+}
+.w-richtext ol li:last-child, 
+.w-richtext ul li:last-child, 
+.w-richtext > :last-child {
+    margin-bottom:0!important
+}
+.pointer-events-off{
+    pointer-events:none
+}
+.pointer-events-on{
+    pointer-events:auto
+}
+.div-square::after{
+    content:"";
+    display:block;
+    padding-bottom:100%
+}
+.container-large,.container-medium,.container-small{
+    margin-right:auto!important;
+    margin-left:auto!important
+}
+.w-dropdown-btn,.w-dropdown-link,.w-dropdown-toggle,.w-input,.w-nav-link,.w-select,.w-tab-link,a{
+    color:inherit;
+    text-decoration:inherit;
+    font-size:inherit
+}
+.text-style-3lines{
+    display:-webkit-box;
+    overflow:hidden;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical
+}
+.text-style-2lines{
+    display:-webkit-box;
+    overflow:hidden;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical
+}
+.display-inlineflex{
+    display:inline-flex
+}
+.hide{
+    display:none!important
+}
+@media screen and (max-width:991px){
+    .hide,
+    .hide-tablet{
+        display:none!important
+    }
+}
+@media screen and (max-width:767px){
+    .hide,
+    .hide-tablet, 
+    .hide-mobile-landscape {
+        display:none!important
+    }
+}
+@media screen and (max-width:479px){
+    .hide, 
+    .hide-tablet, 
+    .hide-mobile-landscape, 
+    .hide-mobile {
+        display:none!important
+    }
+}
+.margin-0{
+    margin:0!important
+}
+.padding-0{
+    padding:0!important
+}
+.spacing-clean{
+    padding:0!important;
+    margin:0!important
+}
+.margin-top{
+    margin-right:0!important;
+    margin-bottom:0!important;
+    margin-left:0!important
+}
+.padding-top{
+    padding-right:0!important;
+    padding-bottom:0!important;
+    padding-left:0!important
+}
+.section-padding-top {
+    padding-right:0!important;
+    padding-bottom:0!important;
+    padding-left:0!important
+}
+
+.margin-right{
+    margin-top:0!important;
+    margin-bottom:0!important;
+    margin-left:0!important
+}
+.padding-right{
+    padding-top:0!important;
+    padding-bottom:0!important;
+    padding-left:0!important
+}
+.margin-bottom{
+    margin-top:0!important;
+    margin-right:0!important;
+    margin-left:0!important
+}
+.padding-bottom{
+    padding-top:0!important;
+    padding-right:0!important;
+    padding-left:0!important
+}
+.section-padding-bottom {
+    padding-top:0!important;
+    padding-right:0!important;
+    padding-left:0!important
+}
+.margin-left{
+    margin-top:0!important;
+    margin-right:0!important;
+    margin-bottom:0!important
+}
+.padding-left{
+    padding-top:0!important;
+    padding-right:0!important;
+    padding-bottom:0!important
+}
+.margin-horizontal{
+    margin-top:0!important;
+    margin-bottom:0!important
+}
+.padding-horizontal{
+    padding-top:0!important;
+    padding-bottom:0!important
+}
+.margin-vertical{
+    margin-right:0!important;
+    margin-left:0!important
+}
+.padding-vertical{
+    padding-right:0!important;
+    padding-left:0!important
+}
+
+.text-wrap-balance {
+    text-wrap: balance;
+}
+
+[class*="-icon"] svg {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+[class*="-icon"] * {
+    fill: currentColor;
+    stroke: currentColor;
+}
+
+[role="button"], 
+[role="link"] {
+    cursor: pointer;
+}
+
+/** Webflow Editor Utils & Styles */
+
+html.w-editor .w-editor-body [no-editor] {
+    position: relative;
+    background-color: #fee2e2;
+    outline-color: #dc2626;
+    outline-offset: 4px;
+    outline-width: 2px;
+    outline-style: solid;
+}
+
+html.w-editor .w-editor-body [no-editor="cms"] {
+    background-color: rgba(139, 99, 255, 0.2);
+    outline-color: rgb(139, 99, 255);
+}
+
+html.w-editor .w-editor-body [no-editor] > div {
+    pointer-events: none;
+}
+
+html.w-editor .w-editor-body [no-editor]:after {
+    content: "Nicht für Editoren zu bearbeiten";
+    display: block;
+    padding: 0.6rem 0.8rem 0.3rem 0.8rem;
+    position: absolute;
+    z-index: 4;
+    top: -4px;
+    transform: translateY(-100%);
+    left: -4px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #dc2626;
+    background-color: #fee2e2;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+}
+
+html.w-editor .w-editor-body [no-editor="cms"]:after {
+    content: "Bearbeitung über »Collections«";
+    color: white;
+    background-color: rgb(139, 99, 255);
+}
+
+html.w-editor :not(.w-richtext) h1:empty,
+html.w-editor :not(.w-richtext) h2:empty,
+html.w-editor :not(.w-richtext) h3:empty,
+html.w-editor :not(.w-richtext) h4:empty,
+html.w-editor :not(.w-richtext) h5:empty,
+html.w-editor :not(.w-richtext) h6:empty,
+html.w-editor :not(.w-richtext) p:empty,
+html.w-editor :not(.w-richtext) li:empty,
+html.w-editor .hero_topline:empty {
+    width: 50px;
+    height: 50px;
+    border: 1px dotted rgba(0,0,0,0.4)
+}
+
+html.w-editor .w-editor-body [no-editor="cms-page"]:after {
+    content: "Collection Page - Bearbeitung über »Collections«";
+    display: block;
+    padding: 0.9rem 1.4rem 0.6rem 1.4rem;
+    position: fixed;
+    z-index: 99;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.1;
+    color: white;
+    background-color: rgb(139, 99, 255);
+    border-radius: 0.4rem;
+}
+
+/* Center Images in Rich text */
+.w-richtext.project-detail_rich-text figure {
+    width: 100%;
+    max-width: 52rem;
+    position: relative;
+}
+
+.w-richtext.project-detail_rich-text figure div {
+    width: 100%;
+}
+
+.w-richtext.project-detail_rich-text .w-richtext-align-floatleft,
+.w-richtext.project-detail_rich-text .w-richtext-align-floatright {
+    margin-right: 0rem;
+    margin-left: 0rem;
+}
